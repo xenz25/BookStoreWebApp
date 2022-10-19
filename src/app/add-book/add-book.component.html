@@ -1,0 +1,35 @@
+<div class="container">
+  <form [formGroup]="bookForm" (ngSubmit)="(saveBook())" class="p-5">
+    <h2 class="mb-5">Please provide the book details</h2>
+    <div class="form-group mb-3">
+      <label for="input-title" class="form-label">Book Title</label>
+      <input
+        type="text"
+        class="form-control"
+        id="input-title"
+        placeholder="Enter book title"
+        name="title"
+        formControlName="title"
+      />
+    </div>
+    <div class="form-group mb-3">
+      <label for="input-description" class="form-label">Book Description</label>
+      <input
+        type="text"
+        class="form-control"
+        id="input-description"
+        placeholder="Enter book description"
+        name="description"
+        formControlName="description"
+      />
+    </div>
+    <div class="form-group mt-2">
+        <div class="row">
+            <div class="col d-flex justify-content-between flex-row g-3">
+                <a href="/books" class="btn btn-danger">Books List</a>
+                <input type="submit" class="btn btn-primary ms-2" value="Save Book" />
+            </div>
+        </div>
+    </div>
+  </form>
+</div>

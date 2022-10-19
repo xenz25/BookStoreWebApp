@@ -1,0 +1,26 @@
+<div class="container p-5">
+    <div class="row d-flex flex-column">
+        <div class="col mb-3 d-flex justify-content-end w-100">
+            <a href="/addBook" class="btn btn-success">Add Book</a>
+        </div>
+        <div class="col">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let book of books">
+                        <th scope="row">{{book.id}}</th>
+                        <td>{{book.title}}</td>
+                        <td>{{book.description}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
